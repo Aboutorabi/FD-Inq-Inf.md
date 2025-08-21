@@ -1,29 +1,20 @@
 ```mermaid
-flowchart TB
-    FD["Financial Development"]
-    INF["Inflation"]
-    INEQ["Income Inequality"]
+flowchart LR
+    F["Inflation"]
 
     %% Channels
-    IT["Inflation Tax / Flight from Cash"]
-    PC["Portfolio Composition"]
-    WR["Wage & Income Rigidity"]
+    A["Inflation Tax / Flight from Cash"]
+    B["Portfolio Composition"]
+    C["Wage & Income Rigidity"]
 
-    %% IT Effects
-    IT_sub["Effects:</br> Burden on Cash Holders</br> Flight from Cash via FD"]
-    
-    %% PC Effects
-    PC_sub["Effects:</br> Access to Hedging Assets</br> Financial Literacy Gap</br> Wealth Concentration"]
-
-    %% WR Effects
-    WR_sub["Effects:</br> Wage Lag / Sticky Wages</br> Access to Credit & Income Smoothing</br> Bargaining Power via Inclusion"]
+    %% Financial Development Effects (multiline, single line per item)
+    A_sub["Financial Development Effects:<b></br> Burden on Cash Holders</br> Flight from Cash"]
+    B_sub["Financial Development Effects:<b></br> Access to Hedging Assets</br> Financial Literacy Gap</br> Wealth Concentration"]
+    C_sub["Financial Development Effects:<b></br> Wage Lag / Sticky Wages</br> Access to Credit & Income Smoothing</br> Bargaining Power via Inclusion"]
 
     %% Flow connections
-    INF --> IT --> IT_sub --> INEQ
-    FD --> IT
-    INF --> PC --> PC_sub --> INEQ
-    FD --> PC
-    INF --> WR --> WR_sub --> INEQ
-    FD --> WR
+    F --> A --> A_sub --> G["Income Inequality"]
+    F --> B --> B_sub --> G
+    F --> C --> C_sub --> G
 
 ```
