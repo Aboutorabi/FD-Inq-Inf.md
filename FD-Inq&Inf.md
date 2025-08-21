@@ -7,14 +7,15 @@ flowchart LR
     B["Portfolio Composition"]
     C["Wage & Income Rigidity"]
 
-    %% Financial Development Effects (multiline, single line per item)
-    A_sub["FD Effects:<b></br> Burden on Cash Holders<b></br> Flight from Cash"]
-    B_sub["FD Effects:<b></br> Access to Hedging Assets<b></br> Financial Literacy Gap<b></br> Wealth Concentration"]
-    C_sub["FD Effects:<b></br> Wage Lag / Sticky Wages<b></br> Access to Credit & Income Smoothing<b></br> Bargaining Power via Inclusion"]
+    %% Financial Development Effects (all in a single line per channel)
+    A_sub["FD Effects: Burden on Cash Holders; Flight from Cash"]
+    B_sub["FD Effects: Access to Hedging Assets; Financial Literacy Gap; Wealth Concentration"]
+    C_sub["FD Effects: Wage Lag / Sticky Wages; Access to Credit & Income Smoothing; Bargaining Power via Inclusion"]
 
     %% Flow connections
     F --> A --> A_sub --> G["Income Inequality"]
     F --> B --> B_sub --> G
     F --> C --> C_sub --> G
+
 
 ```
